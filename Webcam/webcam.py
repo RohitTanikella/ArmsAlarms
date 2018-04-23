@@ -1,5 +1,6 @@
 import cv2, time
 import pandas
+import time
 from datetime import datetime
 
 first_frame=None
@@ -8,6 +9,8 @@ times=[]
 df=pandas.DataFrame(columns=["Start","End"])
 
 video=cv2.VideoCapture(0)
+
+init_time=time.time()
 
 while True:
     check, frame = video.read()
